@@ -1,20 +1,9 @@
 const { description } = require('../../package')
 
 module.exports = {
-    /**
-     * Ref：https://v1.vuepress.vuejs.org/config/#title
-     */
+    base: 'doc',
     title: 'Digital-IDE',
-    /**
-     * Ref：https://v1.vuepress.vuejs.org/config/#description
-     */
     description: description,
-
-    /**
-     * Extra tags to be injected to the page HTML `<head>`
-     *
-     * ref：https://v1.vuepress.vuejs.org/config/#head
-     */
     head: [
         ['meta', { name: 'theme-color', content: '#cb81da' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -22,8 +11,6 @@ module.exports = {
     ],
 
     locales: {
-        // The key is the path for the locale to be nested under.
-        // As a special case, the default locale can use '/' as its path.
         '/': {
             lang: 'English', // this will be set as the lang attribute on <html>
         },
@@ -31,12 +18,6 @@ module.exports = {
             lang: '简体中文',
         }
     },
-
-    /**
-     * Theme configuration, here is the default theme configuration for VuePress.
-     *
-     * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-     */
     themeConfig: {
         repo: '',
         editLinks: false,
