@@ -1,7 +1,7 @@
 const { description } = require('../../package')
 
 module.exports = {
-    base: 'doc',
+    base: './',
     title: 'Digital-IDE',
     description: description,
     head: [
