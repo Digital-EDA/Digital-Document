@@ -3,7 +3,7 @@ home: true
 heroImage: /icon.png
 description: Vscode 平台上的 ASIC & FPGA 开发扩展
 actionText: 快速开始 🐳
-actionLink: /guide/introduction
+actionLink: /zh/guide/introduction
 features:
 - title: ✨ HDL 语言支持
   details: 支持 verilog, vhdl, systemverilog, tcl 脚本等

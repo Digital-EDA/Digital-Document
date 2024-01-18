@@ -1,8 +1,14 @@
-启动
+## 第一次进入项目
+
+安装：
 ```bash
 $ yarn install
-$ $Env:NODE_OPTIONS="--openssl-legacy-provider"
-$ yarn build; node make.js
 ```
 
-将 `./src/.vuepress/dist` 下文件夹上传到 `https://github.com/Digital-EDA/doc`
+
+## 编译 + 上传
+
+```bash
+$ $Env:NODE_OPTIONS="--openssl-legacy-provider"
+$ .\update.bat
+```

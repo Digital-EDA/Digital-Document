@@ -1,7 +1,8 @@
 const { description } = require('../../package')
 
 module.exports = {
-    base: '/doc/',
+    // "base" is for github page
+    // base: '/doc/',
     title: 'Digital-IDE',
     description: description,
     head: [
@@ -48,7 +49,15 @@ module.exports = {
                     title: 'Language Services',
                     collapsable: false,
                     children: [
-                        "language-service"
+                        "ls-introduction",
+                        "ls-language-highlight",
+                        "ls-syntax-diagnosis",
+                        "ls-outline",
+                        "ls-hover-tips",
+                        "ls-completion",
+                        "ls-definition-jumps",
+                        "ls-code-formatter",
+                        "ls-vhdl-to-verilog-translation"
                     ]
                 },
                 {
@@ -83,7 +92,15 @@ module.exports = {
                     title: '语言服务',
                     collapsable: false,
                     children: [
-                        "language-service"
+                        "ls-introduction",
+                        "ls-language-highlight",
+                        "ls-syntax-diagnosis",
+                        "ls-outline",
+                        "ls-hover-tips",
+                        "ls-completion",
+                        "ls-definition-jumps",
+                        "ls-code-formatter",
+                        "ls-vhdl-to-verilog-translation"
                     ]
                 },
                 {
