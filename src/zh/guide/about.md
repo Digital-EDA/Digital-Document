@@ -4,9 +4,8 @@ title: 关于
 
 ## 开发人员
 
-- 夜云(Nitcloud)：产品优化与需求工程
-- 启示(Kylin)：HDL语法解析器与Wasm构建
-
+- 夜云(Nitcloud)：产品框架搭建和优化
+- '´Αρης(Daedale) HDL语法解析器与Wasm构建
 - 锦恢(LSTM-Kirigaya)：Digital-IDE内核实现与UI设计
 
 > 括号内为Github用户名

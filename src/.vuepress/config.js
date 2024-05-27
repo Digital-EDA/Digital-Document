@@ -42,6 +42,7 @@ module.exports = {
                     children: [
                         'introduction',
                         'installation',
+                        'quick-start',
                         'todo',
                     ]
                 },
@@ -85,6 +86,7 @@ module.exports = {
                     children: [
                         'introduction',
                         'installation',
+                        'quick-start',
                         'todo',
                     ]
                 },
