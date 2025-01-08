@@ -1,0 +1,37 @@
+{
+  "name": "digital-ide",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Digital-IDE 官方文档",
+  "author": "Kirigaya <1193466151@qq.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "^18.20.0 || >=20.0.0"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
+    "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:preview": "http-server docs/.vuepress/dist",
+    "vp-update": "npx vp-update"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-webpack": "2.0.0-rc.19",
+    "http-server": "^14.1.1",
+    "sass-embedded": "^1.83.1",
+    "sass-loader": "^16.0.4",
+    "typescript": "^5.7.2",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.19",
+    "vuepress-theme-plume": "1.0.0-rc.126"
+  },
+  "dependencies": {
+    "@iconify/vue": "^4.3.0",
+    "artalk": "^2.9.1",
+    "chart.js": "^4.4.7",
+    "echarts": "^5.6.0",
+    "flowchart.ts": "^3.0.1",
+    "mermaid": "^11.4.1",
+    "swiper": "^11.2.0"
+  }
+}

@@ -1,0 +1,56 @@
+:root {
+    /** 主题颜色 */
+    --animation-7s: .7s cubic-bezier(0.23, 1, 0.32, 1);
+    --animation-5s: .5s cubic-bezier(0.23, 1, 0.32, 1);
+    --animation-3s: .35s cubic-bezier(0.23, 1, 0.32, 1);
+    --main-color: #cb81da;
+    --vp-c-purple-1: #8cccd5;
+
+    --vp-c-brand-1: #cb81da;
+    --vp-c-brand-2: #cb81da;
+    --vp-c-brand-3: #e5b2ed;
+    --vp-c-brand-soft: rgba(131, 208, 218, 0.314);
+
+    /** 背景颜色 */
+    --vp-c-bg: #fff;
+    --vp-c-bg-alt: #f6f6f7;
+    --vp-c-bg-elv: #fff;
+    --vp-c-bg-soft: #f6f6f7;
+
+    /** 文本颜色 */
+    --vp-c-text-1: rgba(60, 60, 67);
+    --vp-c-text-2: rgba(60, 60, 67, 0.78);
+    --vp-c-text-3: rgba(60, 60, 67, 0.56);
+}
+
+.vp-doc .hint-container.info .hint-container-title::before {
+    --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23cb81da'/%3E%3C/svg%3E") !important;
+    margin-right: 10px;
+}
+
+/** 深色模式 */
+[data-theme="dark"] {
+    --vp-c-brand-1: #cb81da;
+    --vp-c-brand-2: #cb81da;
+    --vp-c-brand-3: #e5b3ed;
+    --vp-c-brand-soft: rgba(229, 179, 237, 0.314);
+
+    --vp-c-bg: #1b1b1f;
+    --vp-c-bg-alt: #161618;
+    --vp-c-bg-elv: #202127;
+    --vp-c-bg-soft: #202127;
+
+    --vp-c-text-1: rgba(255, 255, 245, 0.86);
+    --vp-c-text-2: rgba(235, 235, 245, 0.6);
+    --vp-c-text-3: rgba(235, 235, 245, 0.38);
+}
+
+.nav .text {
+    font-size: 0.9rem !important;
+}
+
+.nav .iconify {
+    margin-right: 10px !important;
+    font-size: 1.3rem !important;
+    color: #cb81da !important;
+}
