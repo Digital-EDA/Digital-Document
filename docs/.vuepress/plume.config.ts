@@ -98,6 +98,7 @@ export default defineThemeConfig({
                             'project',
                             'simulate',
                             'code-doc',
+                            'vcd',
                             'netlist'
                         ]
                     },
