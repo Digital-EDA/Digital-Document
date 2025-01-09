@@ -6,7 +6,7 @@ import { enNotes, zhNotes } from './notes'
  * @see https://theme-plume.vuejs.press/config/basic/
  */
 export default defineThemeConfig({
-    logo: '/icon.svg',
+    logo: '/icon.png',
 
     appearance: true,  // 配置 深色模式
 
@@ -46,7 +46,7 @@ export default defineThemeConfig({
              * @see https://theme-plume.vuejs.press/config/basic/#profile
              */
             profile: {
-                avatar: '/icon.svg',
+                avatar: '/icon.png',
                 name: 'Digital-IDE',
                 description: 'Digital-IDE 官方文档',
                 // circle: true,
@@ -126,7 +126,7 @@ export default defineThemeConfig({
              * @see https://theme-plume.vuejs.press/config/basic/#profile
              */
             profile: {
-                avatar: '/icon.svg',
+                avatar: '/icon.png',
                 name: 'Digital-IDE',
                 description: 'Digital-IDE Document',
                 // circle: true,
