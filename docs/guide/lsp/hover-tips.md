@@ -31,7 +31,7 @@ permalink: /article/xkhqu96v/
 // 行注释处
 module name #( 
         // 定义上注释
-        parameter DATA_WIDTH // 定义后注释
+        parameter DATA_WIDTH = 3 // 定义后注释
     ) (
         // 定义上注释
         input idata // 定义后注释
@@ -42,18 +42,11 @@ module name #(
     // 定义上注释
     // 定义上注释
     // 定义上注释
-    wire out, in
-         sig; // 定义后注释
+    wire out, in, sig; // 定义后注释
     
 endmodule
 ```
 
 ## 使用效果
 
-<!-- TODO: hover-tips -->
-<center>
-<video width="90%" controls>  
-  <source src="/videos/hover-tips.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+@[artPlayer](/videos/lsp/hover.mp4)

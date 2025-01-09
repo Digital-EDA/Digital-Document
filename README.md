@@ -17,6 +17,8 @@ npm run docs:dev
 
 部署到服务器
 ```sh
-npm run docs:build
+# windows
 .\update.bat
+# linux
+sh update.sh
 ```

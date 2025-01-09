@@ -30,13 +30,8 @@ permalink: /article/085nu703/
 - 定义跳转
 - 代码格式
 - 代码翻译
+- inlay hints
 
-相对于0.3.x版本，0.4.x及以上版本支持单文件的语言服务，因此在使用HDL的语言服务时不再需要打开整个文件夹。具体的使用方式和效果如下: 
+相对于 `0.3.x` 版本，`0.4.x` 及以上版本支持单文件的语言服务，因此在使用 HDL 的语言服务时不再需要打开整个文件夹。具体的使用方式和效果如下: 
 
-<!-- TODO: one-file-show -->
-<center>
-<video width="90%" controls>  
-  <source src="/videos/one-file-show.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+@[artPlayer](/videos/lsp/support-single-file.mp4)

@@ -9,14 +9,6 @@ permalink: /article/wem4n467/
 
 ## 产生例化
 
-<!-- TODO: auto-instance（） -->
-<center>
-<video width="90%" controls>  
-  <source src="/videos/netlist.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
-
 该插件支持不同语言间的交叉例化，比如在sv文件中例化sv和vhdl模块，或者在vhdl文件中例化sv和vhdl模块。
 
 步骤如下:
@@ -43,6 +35,8 @@ permalink: /article/wem4n467/
 对于0.4.0最新版来说，我们对include做了专门的设计，无论写不写include都能正常仿真，但我们强烈不建议写include，include本身的设计会导致更高的复杂度，导致运行的不稳定性。
 
 初期配置时，安装好`iverilog`，并将其配置到系统环境下，或者在setting中配置其安装路径。
+
+
 ### 使用说明
 
 快速仿真的使用非常简单，只需要一步：

@@ -23,13 +23,8 @@ snippet补全是vscode自带的一种补全方式，由插件和用户所提供�
 
 如果你希望自行补充自定义的一些snippet功能，可以进行如下操作：
 
-<!-- TODO: add-snippets -->
-<center>
-<video width="100%" controls>  
-  <source src="/videos/add-snippets.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+@[artPlayer](/videos/lsp/completion-snippet.mp4)
+
 
 
 ## 自动例化
@@ -69,21 +64,24 @@ snippet补全是vscode自带的一种补全方式，由插件和用户所提供�
 
 有关自动例化的几个可以设置的参数的说明：
 
-1. `function.lsp.completion.vlog.autoAddInclude`
-    - 是否在例化模块时自动在文件开头加入include，默认为true
-2. `function.lsp.completion.vlog.completeWholeInstante`
-    - 是否完整地自动补全整个例化所需要的所有parameters和ports，默认为true
-3. `function.instantiation.addComment`
-    - 是否在例化后加入一些注释，默认为true
-4. `function.instantiation.autoNetOutputDeclaration`
-    - 是否在例化后自动完成所有output端口的定义，默认为true
+| 配置项                                      | 描述                                                                 | 默认值  |
+|---------------------------------------------|----------------------------------------------------------------------|---------|
+| `function.lsp.completion.vlog.autoAddInclude` | 是否在例化模块时自动在文件开头加入 `include`                          | `true`  |
+| `function.lsp.completion.vlog.completeWholeInstante` | 是否完整地自动补全整个例化所需要的所有 `parameters` 和 `ports` | `true`  |
+| `function.instantiation.addComment`          | 是否在例化后加入一些注释                                             | `true`  |
+| `function.instantiation.autoNetOutputDeclaration` | 是否在例化后自动完成所有 `output` 端口的定义                     | `true`  |
 
 ## 关键字补全
 
+DIDE 支持 IEEE 2005 标准下的所有关键字、系统函数、宏等等的自动补全和部分函数的文档说明。
+
+@[artPlayer](/videos/lsp/completion-keyword.mp4)
+
+
 当前关键字补全支持以下三种触发模式：
-1. . 关键符触发例化模块的`端口`以及`参数`的补全
-2. \` 关键符触发`宏定义`标识的补全
-3. / 关键符触发include中`路径`的补全
+1. `.` 关键符触发例化模块的`端口`以及`参数`的补全
+2. <code>\`</code> 关键符触发`宏定义`标识的补全
+3. <code>/</code> 关键符触发include中`路径`的补全
 > 目前自动补全只支持在verilog和systemverilog中例化模块里进行端口参数例化时的补全
 
 使用方式和效果如下：

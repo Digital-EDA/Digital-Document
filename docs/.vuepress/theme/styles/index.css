@@ -60,10 +60,10 @@
 }
 
 ::selection {
-    background-color: var(--main-color);
+    background-color: rgba(203, 129, 218, 0.6);
 }
   
 /* 兼容 Firefox */
 ::-moz-selection {
-    background-color: var(--main-color);
+    background-color: rgba(203, 129, 218, 0.6);
 }

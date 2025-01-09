@@ -10,7 +10,7 @@ permalink: /article/60esc87p/
 
 > 注：本插件是下载即用，无需做任何环境，除非需要其他三方工具（如：vivado、iverilog等）时，要自行安装软件。
 
-@[artPlayer](/videos/1.1.mp4)
+@[artPlayer](/videos/quick-start/install-from-vscode.mp4)
 
 ### 在线安装 lsp（自动）
 
@@ -74,4 +74,4 @@ digital lsp 的主版本不一定和 DIDE 是同步的，如果对于同一个�
 
 下载得到了 vsix 文件后按照如下步骤安装：
 
-@[artPlayer](/videos/1.2.mp4)
+@[artPlayer](/videos/quick-start/install-from-vsix.mp4)

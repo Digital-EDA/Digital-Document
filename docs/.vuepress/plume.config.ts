@@ -103,6 +103,11 @@ export default defineThemeConfig({
                         ]
                     },
                     {
+                        text: 'Q&A',
+                        icon: 'mdi:comment-question-outline',
+                        link: '/guide/Q&A.md'
+                    },
+                    {
                         text: '关于',
                         icon: 'carbon:information',
                         link: '/guide/about.md'
