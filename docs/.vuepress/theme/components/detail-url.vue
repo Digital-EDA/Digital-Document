@@ -1,6 +1,7 @@
 <template>
     <div class="detail-url-wrapper">
         <div class="detail-url-container"
+            :style="containerStyle"
             @click="click()"
         >
             <div class="cover">
@@ -43,8 +44,15 @@ const props = defineProps({
     title: {
         type: String,
         required: false
+    },
+    bodyWidth: {
+        type: String
     }
 });
+
+const containerStyle = computed(() => ({
+    width: props.bodyWidth || '80%'
+}));
 
 const blockTitle = computed(() => {
     if (props.title) {
@@ -99,7 +107,6 @@ function click() {
 
 .detail-url-container {
     padding: 0px 10px;
-    width: 80%;
     border-radius: .8rem;
     background-color: rgba(93, 103, 232, 0.1);
     backdrop-filter: blur(5px);

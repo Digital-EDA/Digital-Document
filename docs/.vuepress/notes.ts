@@ -1,4 +1,4 @@
-import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
+import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume';
 
 /* =================== locale: zh-CN ======================= */
 

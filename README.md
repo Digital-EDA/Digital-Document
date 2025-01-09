@@ -2,26 +2,21 @@
 
 The Site is generated using [vuepress](https://vuepress.vuejs.org/) and [vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
 
-## Install
+## 第一次进入项目
 
 ```sh
 npm i
 ```
 
-## Usage
+## 基本使用
 
+本地预览
 ```sh
-# start dev server
 npm run docs:dev
-# build for production
-npm run docs:build
-# preview production build in local
-npm run docs:preview
-# update vuepress and theme
-npm run vp-update
 ```
 
-## Documents
-
-- [vuepress](https://vuepress.vuejs.org/)
-- [vuepress-theme-plume](https://theme-plume.vuejs.press/)
+部署到服务器
+```sh
+npm run docs:build
+.\update.bat
+```

@@ -54,3 +54,16 @@
     font-size: 1.3rem !important;
     color: #cb81da !important;
 }
+
+.vp-file-tree {
+    width: 100% !important;
+}
+
+::selection {
+    background-color: var(--main-color);
+}
+  
+/* 兼容 Firefox */
+::-moz-selection {
+    background-color: var(--main-color);
+}

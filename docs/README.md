@@ -8,13 +8,13 @@ config:
     background: tint-plate
     hero:
       name: Digital IDE
-      tagline: All your need for FPGA&IC
-      text: 现代化 ASIC & FPGA 一体化开发验证扩展
+      tagline: All your need for FPGA & IC
+      text: 现代化 FPGA & IC 一体化开发验证扩展
       actions:
         -
           theme: brand
-          text: 快速开始 🐳
-          link: /guide/introduction.md
+          text: 快速开始
+          link: /guide/quick-start/introduction.md
         -
           theme: alt
           text: Github →

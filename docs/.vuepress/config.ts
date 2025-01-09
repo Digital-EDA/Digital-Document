@@ -68,7 +68,7 @@ export default defineUserConfig({
         // },
 
         /* 博客文章页面链接前缀 */
-        article: '/article/',
+        // article: '/article/',
 
         /**
          * 编译缓存，加快编译速度
@@ -100,18 +100,18 @@ export default defineUserConfig({
             },
 
             /* 本地搜索, 默认启用 */
-            search: false,
+            // search: false,
 
             /**
              * Algolia DocSearch
              * 启用此搜索需要将 本地搜索 search 设置为 false
              * @see https://theme-plume.vuejs.press/config/plugins/search/#algolia-docsearch
              */
-            docsearch: {
-              appId: '',
-              apiKey: '',
-              indexName: '',
-            },
+            // docsearch: {
+            //   appId: '',
+            //   apiKey: '',
+            //   indexName: '',
+            // },
 
             /* 文章字数统计、阅读时间，设置为 false 则禁用 */
             // readingTime: true,
@@ -132,27 +132,27 @@ export default defineUserConfig({
              *  markdown power
              * @see https://theme-plume.vuejs.press/config/plugin/markdown-power/
              */
-            // markdownPower: {
-            //   pdf: true,          // 启用 PDF 嵌入 @[pdf](/xxx.pdf)
-            //   caniuse: true,      // 启用 caniuse 语法  @[caniuse](feature_name)
-            //   plot: true,         // 启用隐秘文本语法 !!xxxx!!
-            //   bilibili: true,     // 启用嵌入 bilibili视频 语法 @[bilibili](bid)
-            //   youtube: true,      // 启用嵌入 youtube视频 语法 @[youtube](video_id)
-            //   artPlayer: true,    // 启用嵌入 artPlayer 本地视频 语法 @[artPlayer](url)
+            markdownPower: {
+              pdf: true,          // 启用 PDF 嵌入 @[pdf](/xxx.pdf)
+              caniuse: true,      // 启用 caniuse 语法  @[caniuse](feature_name)
+              plot: true,         // 启用隐秘文本语法 !!xxxx!!
+              bilibili: true,     // 启用嵌入 bilibili视频 语法 @[bilibili](bid)
+              youtube: true,      // 启用嵌入 youtube视频 语法 @[youtube](video_id)
+              artPlayer: true,    // 启用嵌入 artPlayer 本地视频 语法 @[artPlayer](url)
             //   audioReader: true,  // 启用嵌入音频朗读功能 语法 @[audioReader](url)
-            //   icons: true,        // 启用内置图标语法  :[icon-name]:
-            //   codepen: true,      // 启用嵌入 codepen 语法 @[codepen](user/slash)
-            //   replit: true,       // 启用嵌入 replit 语法 @[replit](user/repl-name)
-            //   codeSandbox: true,  // 启用嵌入 codeSandbox 语法 @[codeSandbox](id)
-            //   jsfiddle: true,     // 启用嵌入 jsfiddle 语法 @[jsfiddle](user/id)
-            //   npmTo: true,        // 启用 npm-to 容器  ::: npm-to
-            //   repl: {             // 启用 代码演示容器
-            //     go: true,         // ::: go-repl
-            //     rust: true,       // ::: rust-repl
-            //     kotlin: true,     // ::: kotlin-repl
-            //   },
-            //   imageSize: 'local', // 启用 自动填充 图片宽高属性，避免页面抖动
-            // },
+              icons: true,        // 启用内置图标语法  :[icon-name]:
+              codepen: true,      // 启用嵌入 codepen 语法 @[codepen](user/slash)
+              replit: true,       // 启用嵌入 replit 语法 @[replit](user/repl-name)
+              codeSandbox: true,  // 启用嵌入 codeSandbox 语法 @[codeSandbox](id)
+              jsfiddle: true,     // 启用嵌入 jsfiddle 语法 @[jsfiddle](user/id)
+              npmTo: true,        // 启用 npm-to 容器  ::: npm-to
+              repl: {             // 启用 代码演示容器
+                go: true,         // ::: go-repl
+                rust: true,       // ::: rust-repl
+                kotlin: true,     // ::: kotlin-repl
+              },
+              imageSize: 'local', // 启用 自动填充 图片宽高属性，避免页面抖动
+            },
 
             /**
              * 在 Markdown 文件中导入其他 markdown 文件内容。
@@ -196,54 +196,5 @@ export default defineUserConfig({
          * @see https://theme-plume.vuejs.press/guide/features/encryption/
          */
         encrypt: {},
-
-        sidebar: {
-            '/': [
-                {
-                    text: '指南',
-                    icon: 'carbon:book',
-                    collapsed: true,
-                    items: [
-                        '/guide/introduction',
-                        '/guide/installation',
-                        '/guide/quick-start',
-                        '/guide/todo',
-                    ]
-                },
-                {
-                    text: '语言服务',
-                    icon: 'carbon:code',
-                    collapsed: true,
-                    items: [
-                        "/guide/ls-introduction",
-                        "/guide/ls-highlight",
-                        "/guide/ls-syntax-diagnosis",
-                        "/guide/ls-outline",
-                        "/guide/ls-hover-tips",
-                        "/guide/ls-completion",
-                        "/guide/ls-definition-jumps",
-                        "/guide/ls-code-formatter",
-                        "/guide/ls-translation"
-                    ]
-                },
-                {
-                    text: '项目管理',
-                    icon: 'carbon:task',
-                    collapsed: true,
-                    items: [
-                        '/guide/pm-introduction',
-                        '/guide/pm-project',
-                        '/guide/pm-simulate',
-                        '/guide/pm-code-doc',
-                        '/guide/pm-netlist'
-                    ]
-                },
-                {
-                    text: '关于',
-                    icon: 'carbon:information',
-                    link: '/guide/about.md'
-                }
-            ],
-        }
     }),
 })

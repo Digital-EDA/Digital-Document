@@ -1,0 +1,4 @@
+.node rect, #mermaid-70 .node circle, #mermaid-70 .node ellipse, #mermaid-70 .node polygon, #mermaid-70 .node path {
+    fill: var(--main-color) !important;
+    stroke: var(--main-color) !important;
+}

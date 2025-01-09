@@ -46,7 +46,7 @@ export default defineThemeConfig({
              * @see https://theme-plume.vuejs.press/config/basic/#profile
              */
             profile: {
-                avatar: 'https://theme-plume.vuejs.press/plume.png',
+                avatar: '/icon.svg',
                 name: 'Digital-IDE',
                 description: 'Digital-IDE 官方文档',
                 // circle: true,
@@ -56,6 +56,58 @@ export default defineThemeConfig({
 
             navbar: zhNavbar,
             notes: zhNotes,
+
+            sidebar: {
+                '/': [
+                    {
+                        text: '指南',
+                        icon: 'carbon:book',
+                        collapsed: false,
+                        prefix: '/guide/quick-start',
+                        items: [
+                            'introduction',
+                            'installation',
+                            'quick-start',
+                            'todo',
+                        ]
+                    },
+                    {
+                        text: '语言服务',
+                        icon: 'carbon:code',
+                        collapsed: false,
+                        prefix: '/guide/lsp',
+                        items: [
+                            "introduction",
+                            "highlight",
+                            "syntax-diagnosis",
+                            "outline",
+                            "hover-tips",
+                            "completion",
+                            "definition-jumps",
+                            "code-formatter",
+                            "translation"
+                        ]
+                    },
+                    {
+                        text: '项目管理',
+                        icon: 'carbon:task',
+                        collapsed: false,
+                        prefix: '/guide/pm',
+                        items: [
+                            'introduction',
+                            'project',
+                            'simulate',
+                            'code-doc',
+                            'netlist'
+                        ]
+                    },
+                    {
+                        text: '关于',
+                        icon: 'carbon:information',
+                        link: '/guide/about.md'
+                    }
+                ]
+            },
 
             /**
              * 公告板
@@ -73,9 +125,9 @@ export default defineThemeConfig({
              * @see https://theme-plume.vuejs.press/config/basic/#profile
              */
             profile: {
-                avatar: 'https://theme-plume.vuejs.press/plume.png',
+                avatar: '/icon.svg',
                 name: 'Digital-IDE',
-                description: 'Digital-IDE 官方文档',
+                description: 'Digital-IDE Document',
                 // circle: true,
                 // location: '',
                 // organization: '',
@@ -83,6 +135,57 @@ export default defineThemeConfig({
 
             navbar: enNavbar,
             notes: enNotes,
+            sidebar: {
+                '/': [
+                    {
+                        text: 'Guide',
+                        icon: 'carbon:book',
+                        collapsed: false,
+                        prefix: '/en/guide/quick-start',
+                        items: [
+                            'introduction',
+                            'installation',
+                            'quick-start',
+                            'todo',
+                        ]
+                    },
+                    {
+                        text: 'Language Server',
+                        icon: 'carbon:code',
+                        collapsed: false,
+                        prefix: '/en/guide/lsp',
+                        items: [
+                            "introduction",
+                            "highlight",
+                            "syntax-diagnosis",
+                            "outline",
+                            "hover-tips",
+                            "completion",
+                            "definition-jumps",
+                            "code-formatter",
+                            "translation"
+                        ]
+                    },
+                    {
+                        text: 'Project Management',
+                        icon: 'carbon:task',
+                        collapsed: false,
+                        prefix: '/en/guide/pm',
+                        items: [
+                            'introduction',
+                            'project',
+                            'simulate',
+                            'code-doc',
+                            'netlist'
+                        ]
+                    },
+                    {
+                        text: 'About',
+                        icon: 'carbon:information',
+                        link: '/en/guide/about.md'
+                    }
+                ]
+            },
 
             /**
              * 公告板

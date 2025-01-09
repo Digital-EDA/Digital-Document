@@ -5,9 +5,9 @@ export const zhNavbar = defineNavbarConfig([
     {
         text: '文档',
         items: [
-            { text: '快速开始', link: '/guide/introduction.md' },
-            { text: '语言服务', link: '/guide/ls-introduction.md' },
-            { text: '项目管理', link: '/guide/pm-introduction.md' }
+            { text: '快速开始', icon: 'carbon:book', link: '/guide/quick-start/introduction.md' },
+            { text: '语言服务', icon: 'carbon:code', link: '/guide/lsp/introduction.md' },
+            { text: '项目管理', icon: 'carbon:task', link: '/guide/pm/introduction.md' }
         ]
     },
     {
@@ -17,13 +17,18 @@ export const zhNavbar = defineNavbarConfig([
 ])
 
 export const enNavbar = defineNavbarConfig([
-    { text: 'Home', link: '/en/' },
-    { text: 'Document', link: '/en/blog/' },
+    { text: '首页', link: '/en/' },
     {
-        text: 'Notes',
+        text: '文档',
         items: [
-            { text: 'Demo', link: '/en/notes/demo/README.md' }
+            { text: 'Quick Start', icon: 'carbon:book', link: '/en/guide/introduction.md' },
+            { text: 'Language Server', icon: 'carbon:code', link: '/en/guide/ls-introduction.md' },
+            { text: 'Project Management', icon: 'carbon:task', link: '/en/guide/pm-introduction.md' }
         ]
+    },
+    {
+        text: '关于',
+        link: '/en/guide/about.md'
     },
 ])
 
