@@ -43,6 +43,20 @@ permalink: /article/40pehd2r/
 
 > 注：如果你是0.3.0之前的工程配置文件的话，可以输入*Digital-IDE: Transform configure file from previous version to new version*来进行配置文件的更新。并且在0.3.0版本后，插件每次启动都会自动询问用户是否要创建`property.json`。
 
+对于缓存区的设计如下：
+
+默认为： `~/.digital-ide/` 下， win 和 linux 下后一样。
+
+:::info
+特殊的，用户如果设置了 `$HOME` 的环境变量的话缓存文件夹就会被放置到 `$HOME/.digital-ide/` 下。因此在安装插件之前注意并检查自己的环境变量是否合适。
+
+优先级：
+- $HOME 环境变量
+- $USERPROFILE 环境变量
+系统认定的HOME路径
+:::
+
+
 $$测试模板工程视频$$
 
 @[artPlayer](/videos/project.mp4)
