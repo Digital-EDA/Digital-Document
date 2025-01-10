@@ -10,7 +10,7 @@ permalink: /article/ob4dnut5/
 
 Netlist 有两种方式进行触发。
 
-### 启动方法一：Codelens
+### NF.1 启动方法一：Codelens
 
 通过 module 上方的 `codelens` 的 Netlist，可以渲染当前 module 的 netlist。
 
@@ -18,13 +18,13 @@ Netlist 有两种方式进行触发。
 
 @[artPlayer](/videos/netlist/trigger-codelens.mp4)
 
-### 启动方法二：模块树
+### NF.2 启动方法二：模块树
 
 在模块树中，你也可以查看某一个 module 的 netlist。
 
 @[artPlayer](/videos/netlist/trigger-treeview.mp4)
 
-## Netlist 基本使用
+## NF.4 - 7 Netlist 基本使用
 
 :::warning
 0.4.0 的 netlist 仍然是一个完成度不高的作品。更多功能会在后续更新。
@@ -32,7 +32,7 @@ Netlist 有两种方式进行触发。
 
 @[artPlayer](/videos/netlist/usage.mp4)
 
-## 手动执行 YS 脚本
+## NF.3 手动执行 YS 脚本
 
 我们还提供了对于 ys 的支持，你可以自己写好 ys 脚本后，使用 DIDE 来直接执行它。点击右上角的粉色羽毛图标即可执行当前的 ys 脚本。
 

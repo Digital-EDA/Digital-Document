@@ -248,16 +248,20 @@ launch主要是完成工程的搭建，在有工程的情况下打开工程，�
 
 ## 库管理系统
 
+:::warning
+库管理系统仍然在开发中，未来会逐步发生需求变更。
+:::
+
 库管理系统，帮助用户快速将插件提供的、三方提供的或者用户自己设计的IP库导入到整个工程设计中去，能帮助用户快速搭建出一个可用的工程模板，使得用户更加关注业务层的设计。因此对于库管理系统定义设计如下：
 
-设计库导入的方式：
+### 设计库导入的方式
 1. 界面引导导入 （推荐）
 2. 属性文件配置
 
 <!-- TODO: library-arch (目前支持并验证好的有哪些库)-->
 ![library-arch](./images/lib.jpg)
 
-导入的IP库的类型：
+### 导入的IP库的类型
 1. local   [本地导入]
 2. remote  [远程链接]（推荐）
 
@@ -267,18 +271,17 @@ launch主要是完成工程的搭建，在有工程的情况下打开工程，�
 
 因此在此支持local导入类型。local导入类型能将IP库代码直接复制到本地，可供用户直接修改，并不影响其他调用IP库的工程。
 
-IP库的导入来源：
-1. 插件后端提供 ------- source path
-2. IP供应商提供 ------- cloud platform
-3. 用户自己设计 ------- costumer path
+### IP库的导入来源
+
+```mermaid
+flowchart TD
+    A[IP库的导入来源] --> B[插件后端提供]
+    A --> C[IP供应商提供]
+    A --> D[用户自己设计]
+    B --> E(source path)
+    C --> F(cloud platform)
+    D --> G(costumer path)
+```
 
 <!-- TODO: library-manager（用户库路径设置、库导入、使用例化的视频） -->
-
-@[artPlayer](/videos/netlist.mp4)
-
-<!-- <center>
-<video width="90%" controls>  
-  <source src="/videos/netlist.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center> -->
+<!-- @[artPlayer](/videos/netlist.mp4) -->

@@ -85,7 +85,9 @@ export default defineThemeConfig({
                             "completion",
                             "definition-jumps",
                             "code-formatter",
-                            "translation"
+                            "translation",
+                            "inlay-hints",
+                            { text: 'Q&A', link: 'Q&A', icon: 'mdi:comment-question-outline' }
                         ]
                     },
                     {
@@ -101,11 +103,6 @@ export default defineThemeConfig({
                             'vcd',
                             'netlist'
                         ]
-                    },
-                    {
-                        text: 'Q&A',
-                        icon: 'mdi:comment-question-outline',
-                        link: '/guide/Q&A.md'
                     },
                     {
                         text: '关于',

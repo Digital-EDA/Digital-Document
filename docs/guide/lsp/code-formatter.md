@@ -6,13 +6,7 @@ permalink: /article/slz63nid/
 
 ## 功能说明
 
-<!-- TODO：code-formatter -->
-<center>
-<video width="100%" controls>  
-  <source src="/videos/code-formatter.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+@[artPlayer](/videos/lsp/format-common.mp4)
 
 可以对选中的字符或者全文进行文档的格式化 vscode自带快捷键打开方式：`shift + alt + f`。支持verilog和VHDL。
 相关设置(setting)说明:
@@ -85,3 +79,7 @@ always @(posedge clk or posedge rst)
     - 是否需要对齐注释
 2. `function.lsp.formatter.vhdl.default.indentation`
     - tab所对应的空格数量
+
+## TODO
+
+- [ ] 参数化

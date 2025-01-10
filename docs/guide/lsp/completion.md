@@ -6,41 +6,42 @@ permalink: /article/un7eg34t/
 
 ## 功能说明
 
-代码设计中的自动补全功能（Code Autocompletion）旨在提高开发效率和代码质量。其主要目的如下：
+代码设计中的自动补全功能 (completion) 指 IDE 根据用户的输入自动预测并给出补全建议， DIDE 提供的自动补全分为如下几类：
 
-1. $提高开发效率$：
-   自动补全可以显著减少开发人员输入代码的时间。通过预测下一步的代码或语法，自动补全帮助开发人员减少手动输入，尤其在长变量名或复杂的类和函数调用时显得尤为高效。
-2. $减少错误$：
-   自动补全功能可以减少输入错误，如拼写错误或未定义的变量。它通过即时显示变量和函数名建议，帮助开发人员更准确地选择并调用现有代码或库，从而减少代码中的常见错误。
-3. $增强可读性和一致性$：
-   自动补全可以帮助开发者遵循一致的命名约定和使用标准化的库调用。这对大型项目和团队协作尤为重要，因为一致性有助于提高代码的可读性和维护性。
+- 代码片段自动补全
+- 关键词自动补全（关键词，系统函数，宏）
+- 自动例化
+- 原语例化
 
-目前支持的自动补全的功能如下：
 
-## snippet补全
+## 代码片段补全
 
-snippet补全是vscode自带的一种补全方式，由插件和用户所提供的snippet共同组成。在本插件的snippet中补充了一些常用设计组件，如边沿提取，计数器，简单状态机模板等逻辑，触发效果如下：
+snippet 补全（代码片段补全）是 vscode 自带的一种补全方式，由插件和用户所提供的 snippet 共同组成。用户定义常用代码的模板，vscode 会自定根据前缀把这个模板补全添加到自动补全列表中。不同于一般的自动补全结果，snippet 的补全项的前缀图标是一个空心方块，比如下图中的 `mod`, `modp` 和 `module` 都是 snippet 补全项。
 
-如果你希望自行补充自定义的一些snippet功能，可以进行如下操作：
+![](./images/completion-snippet.png)
+
+### 预定代码片段
+
+DIDE 提供了 verilog 和 vhdl 的常用模板，在本插件的 snippet 中补充了一些常用设计组件，如申明模块、边沿提取、计数器、简单状态机模板等逻辑：
 
 @[artPlayer](/videos/lsp/completion-snippet.mp4)
 
+### CF.1 自定义代码片段
+
+如果你希望自行补充自定义的一些snippet功能，可以进行如下操作：
+
+@[artPlayer](/videos/lsp/completion-user-define-snippet.mp4)
 
 
-## 自动例化
+## CF.2 自动例化
 
 你是否还在手动进行模块的例化？是否还在一个一个查看要例化的参数和端口？担心例化是缺少端口连接？针对这些问题本插件提供了自动例化功能，能帮助你快速例化你要连接的模块。只要打出你想要例化的模块名（可自动关联）就能将该模块的例化自动补充出来。使用过程如下：
 
-<!-- TODO: auto-instance -->
-<center>
-<video width="100%" controls>  
-  <source src="/videos/auto-instance.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+@[artPlayer](/videos/lsp/completion-common-instance.mp4)
 
 如果你不知道有哪些模块；或者想不出模块的具体名字；或者在有多个重名模块时，需要指定要例化的模块时你就需要使用快速例化来自动补全。使用流程如下：
 1. 将光标放置在文本需要例化处。
+
 2. 使用快捷键`F1`启动命令框，输入*instance*，选择`Digital-IDE: Generate instance template from selected module`命令。
    - 或者使用快捷键`Alt + I`。
    - 或者在需要例化处右击选择`Generate instance template from selected module`
@@ -51,15 +52,11 @@ snippet补全是vscode自带的一种补全方式，由插件和用户所提供�
 在使用快捷键时，需检查是否存在快捷键键冲突。
 :::
 
-## 原语例化
-同时，在0.4.0版本之后，插件包含了`xilinx`以及`efinix`的所有原语的例化，同时给出相应的注释，再也不用到vivado中的language template里面进行复制。
-<!-- TODO: prim-instance -->
-<center>
-<video width="100%" controls>  
-  <source src="/videos/prim-instance.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+## CF.3 原语例化
+同时，在 `0.4.0` 版本之后，插件包含了`xilinx`以及`efinix`的所有原语的例化，同时给出相应的注释，再也不用到vivado中的language template里面进行复制。
+
+@[artPlayer](/videos/lsp/completion-primitive.mp4)
+
 
 
 有关自动例化的几个可以设置的参数的说明：
@@ -71,30 +68,26 @@ snippet补全是vscode自带的一种补全方式，由插件和用户所提供�
 | `function.instantiation.addComment`          | 是否在例化后加入一些注释                                             | `true`  |
 | `function.instantiation.autoNetOutputDeclaration` | 是否在例化后自动完成所有 `output` 端口的定义                     | `true`  |
 
-## 关键字补全
+## CF.4 关键字补全
 
 DIDE 支持 IEEE 2005 标准下的所有关键字、系统函数、宏等等的自动补全和部分函数的文档说明。
 
 @[artPlayer](/videos/lsp/completion-keyword.mp4)
 
+## CF.5 特殊字符补全触发
 
-当前关键字补全支持以下三种触发模式：
-1. `.` 关键符触发例化模块的`端口`以及`参数`的补全
-2. <code>\`</code> 关键符触发`宏定义`标识的补全
-3. <code>/</code> 关键符触发include中`路径`的补全
-> 目前自动补全只支持在verilog和systemverilog中例化模块里进行端口参数例化时的补全
+除了常规的字符（正常的大小写字母）敲入会引发上述的各类自动补全外，一些特殊字符也会触发自动补全：
+1. `.` 关键符触发例化模块的 `端口` 以及 `参数` 的补全
 
-使用方式和效果如下：
-<!-- TODO: auto-completion -->
-<center>
-<video width="100%" controls>  
-  <source src="/videos/auto-completion.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+2. <code>\`</code> 关键符触发 `宏定义` 标识的补全
+3. <code>/</code> 关键符触发 <code>\`include</code> 中 `路径` 的补全
 
+> 目前自动补全只支持在verilog和systemverilog中例化模块里进行端口参数例化时的补全。不使用 <code>\`</code> 只输入字符，DIDE 也能对宏进行补全（还会自动加上 <code>\`</code> 前缀）
+
+@[artPlayer](/videos/lsp/completion-special-trigger.mp4)
+    
 ## 后续规划
 
-[] 支持宏定义函数补全
-[] 支持sv语言的class、interface等中的 `.` 补全
+- [ ] **宏定义**：支持宏定义函数补全
+- [ ] **sv 高级语法支持**：支持sv语言的class、interface等中的 `.` 补全
 

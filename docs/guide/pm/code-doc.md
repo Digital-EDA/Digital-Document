@@ -4,30 +4,45 @@ createTime: 2025/01/08 20:58:14
 permalink: /article/c6cg05hm/
 ---
 
-## 代码文档化
+## CDF.1 - 5 代码文档化
 
 DIDE 对于项目中的 vlog 和 vhdl 等文件，支持直接查看它们的文档，点击右上角的按钮即可查看。通过文档化，你可以快速了解当前 verilog 或者 vhdl 文件中 module 的基本信息和依赖信息。依赖信息也支持跳转。
 
 @[artPlayer](/videos/code2doc.mp4)
 
-## wavedrom 注释
+## CDF.6 Wavedrom 注释
 
-自动文档化目前支持 verilog, systemverilog 和 vhdl。并且支持 wavedrom 可视化。
-wavedrom的使用方式如下，需要在块注释中注明使用的时wavedrom
+Wavedrom 是一种用于绘制数字时序图的工具，特别适合硬件设计和数字电路仿真。它使用简单的 JSON 格式来描述波形，并能在浏览器中实时渲染。Wavedrom 支持多种波形元素，如时钟、信号、总线等，广泛应用于文档编写和教学演示。
+
+DIDE 也支持了在注释中编写 Wavedrom 风格的注释，并在文档化中渲染它们。Wavedrom 注释必须写成块状注释，并且必须在块状注释的第一行写上 `@wavedrom`，DIDE 会给与 Wavedrom 注释代码高亮方便用户编写需要演示的信号。一个例子如下：
+
 ```json
-/*@wavedrom
-{signal: [
-  {name: 'clock', wave: '101010101010101010101'},
-  {name: 'case1:ivalid', wave: '01...................'},
-  {name: 'case2:ivalid', wave: '101010101010101010101'},
-  {name: 'idata', wave: 'x4.4.4.4.4.x.........', data: ['data0','data1','data2','data3','data4']},
-  {name: 'ivalid', wave: '0........1...........'},
-  {name: 'odata', wave: 'x........5.5.5.5.5.x.', data: ['data0','data1','data2','data3','data4']},
-]}
+/* @wavedrom this is wavedrom demo1
+{
+    signal : [
+        { name: "clk",  wave: "p......" },
+        { name: "bus",  wave: "x.34.5x", data: "head body tail" },
+        { name: "wire", wave: "0.1..0." }
+    ]
+}
 */
 ```
 
-## 导出你的文档
+渲染效果：
+
+![](./images/wavedrom.png)
+
+更多 Wavedrom 的用法可以参考它们的教程：
+
+<detail-url
+    href="https://wavedrom.com/tutorial.html"
+    logo="https://wavedrom.com/images/logo.svg"
+    title="wavedrom.com"
+    desc="Hitchhiker's Guide to the WaveDrom"
+></detail-url>
+
+
+## CDF.7 导出你的文档
 
 DIDE 的文档化支持如下三种导出格式：
 
