@@ -219,11 +219,61 @@ ignore文件的优先级大于定义的文件路径，如果ignore中包含src�
 
 ### Xilinx兼容性说明
 
-launch主要是完成工程的搭建，在有工程的情况下打开工程，在没有工程的情况下创建工程。具体注意点如下：
+本插件相当于重做vivado的UI，做到在不使用xilinx的IP和bd下用户无需打开vivado的GUI就能完成整个工程的创建、综合、实现、生成比特流以及下载。
 
+#### 环境配置
+
+首先你需要安装好vivado，并按如下图配置好vivado的安装路径：
+
+![](./images/vivado-path.png)
+
+这样的配置方式能很方便的帮助用户更换vivado的当前执行版本。
+
+#### 构建你的工程
+
+当你需要新建一个工程的时候，只需要进行如下三步操作：
+
+1. 新建工程文件夹，并使用vscode打开这个文件夹。
+2. 打开命令行，创建配置文件，设置你的设备编号。
+3. 将相应代码拖动到相应的文件夹下。
+
+此时你的工程就已经建好，具体参照视频如下：
+
+@[artPlayer](/videos/pm/create-new-prj.mp4)
+
+当你已经有一个标准xilinx的工程时，可以使用如下指令来进行一键转化。（转化前建议先备份）
+
+![](./images/xilinx-standard.png)
+
+标准xilinx工程特点如下：
+1. 设计代码都在 {prjName}.srcs/sources_1/new 下
+2. 约束代码都在 {prjName}.srcs/constrs_1/new 下
+3. 仿真代码都在 {prjName}.srcs/sim_1/new 下
+4. IP部分都在 {prjName}.srcs/sources_1/ip 下
+5. bd部分都在 {prjName}.srcs/sources_1/bd 下
+
+:::info
+在完成转化之后需要直接重启vscode。避免执行不必要的解析。
+:::
+
+#### 使用vivado的仿真器进行仿真
+
+具体操作如下图所示：
+![](./images/vivado-simulate.png)
+
+#### 综合实现以及导出比特流
+
+根据上述的`标准功能入口`用户可以实现整个工程的综合实现以及导出比特流。其中launch主要是完成工程的搭建，在有工程的情况下会直接打开工程，在没有工程的情况下创建工程。
+
+:::info
 从`property.json`中所配置的`arch.prjPath`属性下配置的工程路径下找'.xpr'文件
   - 如果找到一个就直接打开，如果是多个交给用户选择再打开，如果是启用的GUI则直接打开vivado的界面。
   - 如果找不到就根据`property.json`中配置的内容来构建一个工程。
+:::
+
+具体使用如下图所示：
+
+![](./images/vivado-using.png)
 
 ## 依赖结构渲染
 
@@ -258,7 +308,6 @@ launch主要是完成工程的搭建，在有工程的情况下打开工程，�
 1. 界面引导导入 （推荐）
 2. 属性文件配置
 
-<!-- TODO: library-arch (目前支持并验证好的有哪些库)-->
 ![library-arch](./images/lib.jpg)
 
 ### 导入的IP库的类型
@@ -283,5 +332,15 @@ flowchart TD
     D --> G(costumer path)
 ```
 
-<!-- TODO: library-manager（用户库路径设置、库导入、使用例化的视频） -->
-<!-- @[artPlayer](/videos/netlist.mp4) -->
+界面导入方式如下所示：
+@[artPlayer](/videos/pm/import-library.mp4)
+
+### 用户库设置
+
+用户设置自己平时常用库的路径：
+
+![library-path](./images/library-path.jpg)
+
+导入用户库的方式：
+
+![library-custom](./images/library-custom.jpg)
