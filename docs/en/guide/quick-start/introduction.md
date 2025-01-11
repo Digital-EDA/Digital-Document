@@ -9,11 +9,15 @@ permalink: /en/article/c2mce3m0/
 
 ## <code>Digital IDE</code> | All in one <code>vscode</code> plugin for Verilog/VHDL development
 
-[Document (New)](https://sterben.nitcloud.cn/) | [中文文档 (New)](https://sterben.nitcloud.cn/zh/) | [Bilibili Video](https://www.bilibili.com/video/BV1t14y1179V/?spm_id_from=333.999.0.0)
+[Document (New)](https://nc-ai.cn/en) | [中文文档 (New)](https://nc-ai.cn) | [Bilibili Video](https://www.bilibili.com/video/BV1t14y1179V/?spm_id_from=333.999.0.0)
 
 </div>
 
-Digital IDE (dide for short) is a user-friendly and efficient development tool designed for digital developers. We are committed to the development concept where the file structure corresponds directly to the project structure. With a standardized, simplified, and visualized project management system, IP management system, and a variety of auxiliary components, we help downstream developers meet the requirements of agile development, verification, and team collaboration during the R&D process. For upstream, we assist FPGA vendors in reducing the cost of expanding and maintaining their software development ecosystems.
+<br>
+
+Digital IDE (DIDE) is a user-friendly and efficient self-developed development tool for digital engineers. DIDE can run on all common platforms (Windows, Linux, macOS). For engineers who frequently work via SSH to connect to internal network servers, DIDE also supports various functions for remote development.
+
+We are dedicated to the development philosophy of file structure and project structure, and with the help of standardized, simplified, and visual project management systems, IP management systems, and a wealth of auxiliary components, we assist downstream developers in meeting the needs of agile development, verification, and team collaboration during the research and development process. For upstream users, DIDE helps FPGA manufacturers reduce the costs associated with expanding and maintaining the software development ecosystem.
 
 
 Our github repo 👇
@@ -98,6 +102,7 @@ When submitting an issue, please include the following details:
 - Detailed description of the problem and its cause
 - Source code (if applicable, for better reproducibility)
 - Screenshots (include as much context as possible, such as the structure tree and file structure)
+- 
 </Card>
 
 :::info

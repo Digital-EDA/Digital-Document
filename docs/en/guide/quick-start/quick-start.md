@@ -38,17 +38,26 @@ To help users get started quickly, this project provides a test template project
 
 This plugin defines the project configuration file as `property.json`, which is placed only in the `.vscode` folder. The configuration file can be generated in the following ways:
 
-Use the shortcut `F1` to open the command box, then enter *Digital-IDE:Generate property.json* to generate the initial `property.json` template file. The generated configuration file will be placed directly in the `.vscode` folder.
+- Use the shortcut `F1` to open the command box, then enter *Digital-IDE:Generate property.json* to generate the initial `property.json` template file. The generated configuration file will be placed directly in the `.vscode` folder.
 
-If you have your own template, you can use *Digital-IDE:Overwrite property.json template* to customize the template file. Starting from version 0.4.0, user settings and configurations will be added to the cache and will not be updated with the plugin.
+- If you have your own template, you can use *Digital-IDE:Overwrite property.json template* to customize the template file. Starting from version 0.4.0, user settings and configurations will be added to the cache and will not be updated with the plugin.
 
-Note: If you are using a configuration file from version 0.3.0 or earlier, you can enter *Digital-IDE: Transform configure file from previous version* to new version to update the configuration file. Additionally, starting from version 0.3.0, the plugin will automatically ask users whether to create `property.json` each time it is started.
+> Note: If you are using a configuration file from version 0.3.0 or earlier, you can enter *Digital-IDE: Transform configure file from previous version* to new version to update the configuration file. Additionally, starting from version 0.3.0, the plugin will automatically ask users whether to create `property.json` each time it is started.
+
+For the cache directory design:
+
+By default, the cache directory is located under `~/.digital-ide/`, and this is the same for both Windows and Linux systems.
+
+:::info
+Special note: If the user has set the `$HOME` environment variable, the cache directory will be placed under `$HOME/.digital-ide/`. Therefore, it is important to check your environment variables before installing the plugin to ensure they are correctly configured.
+
+Priority order:
+
+- $HOME environment variable
+- $USERPROFILE environment variable
+System-recognized HOME path
+:::
 
 **Test Template Project Video**
 
-<center>
-<video width="90%" controls>  
-  <source src="/videos/project.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+@[artPlayer](/videos/project.mp4)

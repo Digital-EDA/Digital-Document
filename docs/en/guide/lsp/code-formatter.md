@@ -4,14 +4,9 @@ createTime: 2025/01/08 23:52:18
 permalink: /en/article/ix69vkfm/
 ---
 
-## Code Formatter
+## Feature Description
 
-<center>
-<video width="90%" controls>  
-  <source src="/videos/2.3.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+@[artPlayer](/videos/lsp/format-common.mp4)
 
 
 The selected text or the entire document can be formatted using the built-in VS Code shortcut: `Shift + Alt + F`. This feature supports verilog and VHDL.
@@ -31,7 +26,7 @@ Related setting description:
 # -P Adds spaces around both operators and parentheses.
 ```
 
-Effects of istyle Formatting Types:
+Effects of istyle formatting types:
 
 ### ANSI style
 ```verilog
@@ -86,3 +81,7 @@ always @(posedge clk or posedge rst)
     - whether need to align comments
 2. `function.lsp.formatter.vhdl.default.indentation`
     - the number of spaces corresponding to the tab
+
+## TODO
+
+- [ ] parameterization

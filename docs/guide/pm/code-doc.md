@@ -54,7 +54,7 @@ DIDE 的文档化支持如下三种导出格式：
 
 导出的文档默认都在项目的 `./doc` 下。
 
-如果需要导出pdf，请将你本机的Google Chrome或者Edge浏览器的启动路径填入参数**markdown-pdf executable path**中。由于大部分pdf阅读器都不支持变色背景，请在浅色主题下导出你的pdf：
+如果需要导出pdf，请将你本机的Google Chrome或者Edge浏览器的启动路径填入参数**markdown-pdf executable path**中。由于大部分pdf阅读器都不支持变色背景，请在浅色主题下导出你的pdf.
 
 :::info
 如果是 Windows 11 用户，默认不需要设置浏览器路径。因为 win11 自带的 edge 路径 `C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe` 是固定的。

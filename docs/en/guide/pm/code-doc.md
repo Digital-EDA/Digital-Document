@@ -4,45 +4,58 @@ createTime: 2025/01/08 23:52:18
 permalink: /en/article/0kzryk3m/
 ---
 
-## Code to Doc
+## CDF.1 - 5 Code to Doc
 
-<center>
-<video width="90%" controls>  
-  <source src="/videos/code2doc.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+DIDE supports directly viewing the documentation for files like vlog and vhdl in your project. Simply click the button in the top-right corner to view the documentation. Through this feature, you can quickly understand the basic information and dependency information of the current Verilog or VHDL modules. Dependency information is also supported for navigation.
 
-Auto-documentation currently only supports verilog and wavedrom visualization, and also supports the following three export formats:
+@[artPlayer](/videos/code2doc.mp4)
+
+## CDF.6 Wavedrom Comment
+
+Wavedrom is a tool used for drawing digital timing diagrams, particularly suited for hardware design and digital circuit simulation. It uses a simple JSON format to describe waveforms, which can be rendered in real-time in a browser. Wavedrom supports various waveform elements such as clocks, signals, and buses, making it widely used for documentation and teaching demonstrations.
+
+DIDE also supports writing Wavedrom-style comments in comments, and rendering them in the documentation. Wavedrom comments must be written as block comments, and the first line of the block comment must include `@wavedrom`. DIDE will provide syntax highlighting for Wavedrom comments to help users write signals for demonstration purposes. Here's an example:
+
+
+```json
+/* @wavedrom this is wavedrom demo1
+{
+    signal : [
+        { name: "clk",  wave: "p......" },
+        { name: "bus",  wave: "x.34.5x", data: "head body tail" },
+        { name: "wire", wave: "0.1..0." }
+    ]
+}
+*/
+```
+
+Rendering effect:
+
+![](./images/wavedrom.png)
+
+For more usage of Wavedrom, please refer to their tutorials:
+
+<detail-url
+    href="https://wavedrom.com/tutorial.html"
+    logo="https://wavedrom.com/images/logo.svg"
+    title="wavedrom.com"
+    desc="Hitchhiker's Guide to the WaveDrom"
+></detail-url>
+
+## CDF.7 Export your document
+
+DIDE's documentation supports the following three export formats:
 
 - markdown
 - html
 - pdf
 
+@[artPlayer](/videos/exportpdf.mp4)
 
-The usage of Wavedrom is as follows. It needs to be specified within block comments that Wavedrom is being used.
-```json
-/*@wavedrom
-{signal: [
-  {name: 'clock', wave: '101010101010101010101'},
-  {name: 'case1:ivalid', wave: '01...................'},
-  {name: 'case2:ivalid', wave: '101010101010101010101'},
-  {name: 'idata', wave: 'x4.4.4.4.4.x.........', data: ['data0','data1','data2','data3','data4']},
-  {name: 'ivalid', wave: '0........1...........'},
-  {name: 'odata', wave: 'x........5.5.5.5.5.x.', data: ['data0','data1','data2','data3','data4']},
-]}
-*/
-```
+The exported documentation is by default located in the `./doc` directory of the project.
 
-If you need to export pdf, please fill the startup path of your local Google Chrome or Edge browser into the parameter **markdown-pdf executable path**. As most pdf readers do not support color changing background, please export your pdf in light color theme:
+To export to PDF, please fill in the executable path of Google Chrome or Edge browser on your machine in the parameter **markdown-pdf executable path**. Since most PDF readers do not support colored backgrounds, please export your PDF under a light color theme.
 
-> In windows 11, the default startup path for Edge is `C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe`.
-
-<center>
-<video width="90%" controls>  
-  <source src="/videos/exportpdf.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
-
----
+:::info
+For Windows 11 users, there's no need to set the browser path by default. This is because the path to the built-in Edge browser, `C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe`, is fixed.
+:::

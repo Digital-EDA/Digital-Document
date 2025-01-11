@@ -6,79 +6,39 @@ permalink: /en/article/gcnsg49q/
 
 The purpose of simulation building is to help users to build their own simulation framework quickly and get simulation results quickly.
 
-## Generate instance
+## iverilog
 
-<!-- TODO: auto-instance（） -->
-<center>
-<video width="90%" controls>  
-  <source src="/videos/netlist.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+For quick verification of small modules, we have provided a one-click fast simulation feature, which relies on `iverilog` for execution. Therefore, users need to configure the installation of `iverilog` themselves.
 
-Although auto-completion can realize the automatic completion of the example, but it can not view the entire project all the available modules and select from them, so we provide automatic example of the function; In addition, we also provide automatic generation of the selected module testbench function.
+For the latest version 0.4.0, we have made special adjustments for include statements. Whether you include them or not, the simulation can proceed normally, but we strongly recommend not writing include statements. The design of include can introduce higher complexity and result in instability during execution.
 
-The plugin supports cross instantiation between different languages, such as instantiating verilog and vhdl modules in a verilog file, or Verilog and vhdl modules in a vhdl file.
+During the initial setup, install `iverilog` and configure it in the system environment, or specify its installation path in the settings.
 
-The steps are as follows:
-1. Place the cursor where the text needs to be instantiated. 
-2. Start the command box by `F1`, type *Instance*, and select `TOOL:Instance`.
-   1. or use the shortcut `Alt + I`
-   2. or right-click on the module to be instantiated and select `Instance`
-3. Enter the keyword of the module to be instantiated (the plugin will automatically match it). 
-4. Select the module you want to instantiate.
+## Quick Simulation
 
-`[Note]`: When using shortcut keys, you need to check if there is a shortcut key conflict.
+There are two ways to trigger quick simulation. One is through the inline characters in `codelens`, and the other is through the button in the module tree.
 
-If you want to change the template of testbench, proceed as follows:
-Use the shortcut `F1` to start the command box, then select TOOL:Overwrite the template of testbench to choose the type of simulation file you want to change. This will open the initialization file of the testbench file, what you need to do is saving the changes based on this. In addition, please keep the `//Instance` flag, which is used to identify the location to be instantiated.
+### SF.1 Quick Simulation via codelens
 
-The intelligent connection between the tb file and the instantiated module will be considered later.
+As shown in the image below, the Simulate button located on top of the module name serves as the entry point for quick simulation.
 
-## Fast Simulate
+![](./images/simulate-codelens.png)
 
-To facilitate rapid validation of small modules, a one-click quick simulation feature is provided, leveraging `iverilog`. Users must install and configure `iverilog` independently.
+### SF.2 Quick Simulation via Module Tree
 
-For version 0.4.0 and later, specific design improvements for include have been implemented. While simulation will run correctly regardless of whether include is used, we strongly discourage its use due to the increased complexity and instability it introduces.
+As shown in the image below, the entry point for quick simulation is located in the dependency structure.
 
-Initial Configuration:
-Install `iverilog` and add it to the system environment, or specify its installation path in the plugin settings.
+![](./images/simulate-treeview.png)
 
-### Usage Instructions:
-Quick simulation requires just one step:
+After clicking for quick simulation, if a VCD file is generated, DIDE will automatically open the corresponding waveform renderer.
 
-Click the Simulate 1`unctionality button` at the corresponding testbench module's access point. Simulation will be completed, and the VCD waveform renderer will open (currently supporting only VCD format waveforms).
-
-`Functionality Access Point 1:`
-
-As shown in the image below, the Simulate button is accessible by hovering over the module name in the hierarchy.
-
-<!-- TODO: sim-incode -->
-![行间功能入口]()
-
-`Functionality Access Point 2:`
-
-As shown in the dependency structure below, the access point for this functionality is integrated within the design hierarchy.
-
-<!-- TODO: sim-arch -->
-![依赖结构中的功能入口]()
-
-
-After clicking the functionality access point, if a VCD file is generated, the plugin automatically opens the corresponding waveform viewer. Users can directly review the waveform within the viewer. The following video demonstrates how to use the waveform viewer in detail:
-
-<!-- TODO: waveview wave渲染器的使用教程视频-->
-<center>
-<video width="90%" controls>  
-  <source src="/videos/waveview.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+@[artPlayer](/videos/vcd/trigger-simulate.mp4)
 
 ### FAQ
 
-Q: No VCD file is generated.
+<Card title="No VCD file is generated." icon="https://picx.zhimg.com/80/v2-d6eb33d06a512edcad625af79d5da7a4_1440w.png">
 
-A: If no errors occurred during execution, the issue might be that the testbench (TB) file is missing statements to generate the VCD waveform file:
+If no errors occurred during execution, the issue might be that the testbench (TB) file is missing statements to generate the VCD waveform file:
 
 ```verilog
 initial begin
@@ -87,7 +47,64 @@ initial begin
     #2000 $finish();
 end
 ```
+</Card>
 
-Q: Execution freezes with no output.
+<br>
+
+<Card title="Where is the nererated VCD file?" icon="https://picx.zhimg.com/80/v2-d6eb33d06a512edcad625af79d5da7a4_1440w.png">
+
+When you use `dumpfile` to specify an export path in your project, the root of this path is your working directory. For example, with the following file structure:
+
+::: file-tree
+
+- PROJECT_NAME
+  - .vscode
+    - property.json
+  - user
+    - sim/
+      - test.v
+    - src/
+:::
+
+test.v:
+
+```verilog
+module test();
+    initial begin
+        $dumpfile("prj/test.vcd");        
+        #2000 $finish();
+    end
+endmodule
+```
+
+The VCD file will be generated in the root directory under `prj/test.vcd`, according to the file structure you mentioned:
+
+::: file-tree
+
+- PROJECT_NAME
+  - .vscode
+    - property.json
+  - prj
+    - test.vcd
+  - user
+    - sim/
+      - test.v
+    - src/
+:::
+
+</Card>
+
+<Card title="Execution freezes with no output." icon="https://picx.zhimg.com/80/v2-d6eb33d06a512edcad625af79d5da7a4_1440w.png">
 
 A: If no errors occurred during execution, the issue might be that the testbench lacks a `$finish();` statement. It is strongly discouraged to omit this statement as it causes the VCD file to grow indefinitely and leads to the iverilog backend freezing the process. Add a `$finish();` statement to complete the validation design properly.
+
+</Card>
+
+<Card title="Cannot simulate and no error message" icon="https://picx.zhimg.com/80/v2-d6eb33d06a512edcad625af79d5da7a4_1440w.png">
+
+When the quick simulation feature encounters an error:
+1. Remove the include section from the code.
+2. Downgrade the iverilog version to 11, or download the Windows version directly from the group files as shown in the image. This issue will be fixed in the future; the above is a temporary workaround.
+3. As shown in the image below, do not select run in terminal in the DIDE settings.
+![](./images/sim-bug.png)
+</Card>

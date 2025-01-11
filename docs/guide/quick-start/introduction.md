@@ -58,7 +58,6 @@ Digital IDE (简称为 DIDE) 是一个给数字开发工作者提供的友好便
 
 ### 语言服务功能更新
 1. 修复port表格description列混乱问题，github #78 #77；
-
 2. 去除了本地default的语法诊断功能。
 
 ### 波形渲染功能更新

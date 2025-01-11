@@ -106,3 +106,14 @@ endmodule
 如果运行的过程中没有报错，那可能是tb文件中缺少`$finish();`，强烈不建议这么做，这样做vcd会不断变大，后端iverilog也会卡住进程。需要在设计中加入一个`$finish();`来完善整个验证设计。
 
 </Card>
+
+<Card title="无法 simulate 且没有报错内容" icon="https://picx.zhimg.com/80/v2-d6eb33d06a512edcad625af79d5da7a4_1440w.png">
+
+快速仿真功能报错时：
+1. 去掉代码中的include部分
+2. 下调iverilog的版本为11，或者如图直接群文件下载win版
+后续会修复此问题，上面是过渡方案
+3. 如下图所示，在DIDE设置中不要选择 `run in terminal`
+![](./images/sim-bug.png)
+</Card>
+

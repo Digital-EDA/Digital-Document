@@ -24,15 +24,10 @@ The "Language Service" in code design is a core tool that enhances the coding an
 - Definition navigation
 - Code formatting
 - Code translation
+- inlay hints
 
 Compared to version 0.3.x, version 0.4.x and later versions support single-file language services. This eliminates the need to open the entire folder when using HDL language services.
 
 Details on how to use these features and their effects are provided below:
 
-<!-- TODO: one-file-show -->
-<center>
-<video width="90%" controls>  
-  <source src="/videos/one-file-show.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+@[artPlayer](/videos/lsp/support-single-file.mp4)

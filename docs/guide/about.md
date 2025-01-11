@@ -57,7 +57,7 @@ permalink: /article/x3byp3a6/
     href="https://github.com/zznjupt"
     logo="/avatar/zznjupt.png"
     title="云雀 (zznjupt)"
-    desc="HDL-library 的 SOC 技术顾问"
+    desc="HDL-library 计划 SoC 技术总监"
     body-width="95%"
 ></detail-url>
 </div>

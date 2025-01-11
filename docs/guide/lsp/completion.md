@@ -40,8 +40,8 @@ DIDE 提供了 verilog 和 vhdl 的常用模板，在本插件的 snippet 中补
 @[artPlayer](/videos/lsp/completion-common-instance.mp4)
 
 如果你不知道有哪些模块；或者想不出模块的具体名字；或者在有多个重名模块时，需要指定要例化的模块时你就需要使用快速例化来自动补全。使用流程如下：
-1. 将光标放置在文本需要例化处。
 
+1. 将光标放置在文本需要例化处。
 2. 使用快捷键`F1`启动命令框，输入*instance*，选择`Digital-IDE: Generate instance template from selected module`命令。
    - 或者使用快捷键`Alt + I`。
    - 或者在需要例化处右击选择`Generate instance template from selected module`
@@ -78,7 +78,6 @@ DIDE 支持 IEEE 2005 标准下的所有关键字、系统函数、宏等等的�
 
 除了常规的字符（正常的大小写字母）敲入会引发上述的各类自动补全外，一些特殊字符也会触发自动补全：
 1. `.` 关键符触发例化模块的 `端口` 以及 `参数` 的补全
-
 2. <code>\`</code> 关键符触发 `宏定义` 标识的补全
 3. <code>/</code> 关键符触发 <code>\`include</code> 中 `路径` 的补全
 

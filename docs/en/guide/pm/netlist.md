@@ -8,27 +8,32 @@ permalink: /en/article/x29n1v76/
 
 We have integrated the Yosys executable file (directly compiled) into the plugin backend. This integration allows project code synthesis (limited to Verilog and certain SystemVerilog files; see the Yosys official website for supported features) without the need to install or configure any additional software. After synthesis, the generated netlist can be visualized as a schematic diagram.
 
-The process is straightforward: simply click the corresponding button in the functionality menu to render the netlist with the current module as the top-level design. This feature enables users to quickly review their design implementation.
+There are two ways to trigger a Netlist.
 
-`Functionality Access Point 1:`
+### NF.1 Method 1：Codelens
 
-As shown in the figure below, the Netlist button, located in the hover menu over the module name, serves as the access point for this functionality.
+By using the `codelens` Netlist above the module, the netlist of the current module can be rendered.
 
-<!-- TODO: netlist-incode -->
-![行间功能入口]()
+As shown in the image below, the `Netlist` button functionality is accessed by hovering over the module name.
 
-`Functionality Access Point 2:`
+@[artPlayer](/videos/netlist/trigger-codelens.mp4)
 
-As shown in the dependency structure below, the access point for this functionality is integrated within the design hierarchy.
+### NF.2 Method 2：Module tree
 
-<!-- TODO: netlist-arch -->
-![依赖结构中的功能入口]()
+In the module tree, you can also view the netlist of a certain module.
 
-<!-- TODO: netlist (netlist具体使用教程视频) -->
-<center>
-<video width="90%" controls>  
-  <source src="/videos/netlist.mp4" type="video/mp4">  
-  您的浏览器不支持视频标签。  
-</video>
-</center>
+@[artPlayer](/videos/netlist/trigger-treeview.mp4)
 
+## NF.4 - 7 Netlist Basic Usage
+
+:::warning
+The netlist in version 0.4.0 is still a work in progress with limited functionality. More features will be added in future updates.
+:::
+
+@[artPlayer](/videos/netlist/usage.mp4)
+
+## NF.3 Manually Execute YS Script
+
+We also provide support for YS scripts. You can write your own YS script and execute it directly using DIDE. Click the pink feather icon in the top-right corner to execute the current YS script.
+
+![](./images/run-ys.png)
