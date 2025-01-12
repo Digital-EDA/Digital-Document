@@ -306,8 +306,8 @@ The import interface is shown as follows:
 
 Users can set the paths for the libraries they commonly use:
 
-![library-path](./images/library-path.jpg)
+![library-path](./images/library-path.png)
 
 The method to import user libraries:
 
-![library-path](./images/library-path.jpg)
+![library-path](./images/library-path.png)
