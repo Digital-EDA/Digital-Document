@@ -339,8 +339,8 @@ flowchart TD
 
 用户设置自己平时常用库的路径：
 
-![library-path](./images/library-path.jpg)
+![library-path](./images/library-path.png)
 
 导入用户库的方式：
 
-![library-custom](./images/library-custom.jpg)
+![library-custom](./images/library-custom.png)
