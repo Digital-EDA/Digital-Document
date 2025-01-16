@@ -1,6 +1,7 @@
 **/node_modules
 
 docs/.vuepress/.cache
+docs/.vuepress/public/*.zip
 docs/.vuepress/.temp
 docs/.vuepress/dist
 
