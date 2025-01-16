@@ -48,30 +48,15 @@ In the opened file browser, locate the previously downloaded and copied compress
 If you encounter any issues, feel free to join our QQ group (932987873) to consult with us.
 :::
 
-## Install beta version
+## Install the Latest Beta Version
 
-Thanks to the efforts of our team, DIDE is constantly being updated. The version available in the Vscode marketplace may differ significantly from the latest version. If you want to use the latest test version of our plugin, you can obtain the latest vsix file through the following methods:
-
-:::info Method 1: Download from the QQ Group Files 
-Join our QQ discussion group (932987873), and in the group files, search for `fpga-support`. Click "More" and select the latest version (the one at the top) to download.
+Thanks to the continuous efforts of our team, DIDE is constantly being updated. The version available in the Vscode marketplace may differ significantly from our latest version. If you would like to use the latest beta version of our plugin, you can join our QQ discussion group (932987873). In the group files, search for `fpga-support`, click "More," and select the latest version (the one at the top) to download.
 
 ![](./images/qq-download.png)
-:::
 
-:::info Method 2: Download from Release
-Download `fpga-support-{version}.vsix` from [releases](https://github.com/Digital-EDA/Digital-IDE/releases).
-
-![alt text](./images/release.png)
-
-We recommend joining our group chat, as it offers the following benefits:
-
-1. Experience new versions earlier. Beta versions are released for internal testing 3–4 months before the official release.
-2. Quickly resolve any issues you encounter.
-3. Receive prompt responses to your feature requests.
-:::
-
-Once you download the vsix, you can install from vsix:
+:::info Install VSIX
+After downloading the VSIX file, follow these steps to install it:
 
 @[artPlayer](/videos/quick-start/install-from-vsix.mp4)
 
-
+:::

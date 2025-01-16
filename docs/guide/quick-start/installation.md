@@ -53,25 +53,13 @@ digital lsp 的主版本不一定和 DIDE 是同步的，如果对于同一个�
 
 ## 安装最新测试版
 
-在我们团队的努力下，DIDE 常年处在更新状态，Vscode 商城中下载到的版本可能和我们最新的版本存在很多差异。如果您想使用我们插件的最新测试版，您可以通过以下方式获得最新版本的 vsix 文件:
-
-:::info 方法一：从QQ群文件下载
-加入我们的 QQ 讨论群(932987873)，并在群文件，搜索 `fpga-support`，点击更多，选择最新版本（也就是最上面的）下载即可。
+在我们团队的努力下，DIDE 常年处在更新状态，Vscode 商城中下载到的版本可能和我们最新的版本存在很多差异。如果您想使用我们插件的最新测试版，您可以加入我们的 QQ 讨论群(932987873)，并在群文件，搜索 `fpga-support`，点击更多，选择最新版本（也就是最上面的）下载即可。
 
 ![](./images/qq-download.png)
-:::
 
-:::info 方法二：从Release下载
-从 DIDE 的 Github [releases](https://github.com/Digital-EDA/Digital-IDE/releases) 下载 `fpga-support-{version}.vsix` .
-
-![alt text](./images/release.png)
-
-我们建议您能加入我们群聊，加入群聊有以下好处：
-1. 能最新体验到新的版本，相比正式版本，群内测版会提前3-4月上线进行内测。
-2. 可以快速解决您现在遇到的问题。
-3. 对于您提出的需求能得到最快速的响应。
-:::
-
+:::info 安装 vsix
 下载得到了 vsix 文件后按照如下步骤安装：
 
 @[artPlayer](/videos/quick-start/install-from-vsix.mp4)
+
+:::
